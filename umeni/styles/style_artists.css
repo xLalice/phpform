@@ -1,0 +1,209 @@
+*, *::before, *::after {box-sizing: border-box;}
+* {margin: 0;}
+body {line-height: 1.5;-webkit-font-smoothing: antialiased;}
+img, picture, video, canvas, svg {display: block;max-width: 100%;}
+input, button, textarea, select {font: inherit;}
+p, h1, h2, h3, h4, h5, h6 {overflow-wrap: break-word;}
+#root, #__next {isolation: isolate;}
+
+:root {
+    --primary-color: #FCB415;
+    --secondary-color: #C83E3E;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-image: url('../assets/images/background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    color: #353935;
+    position: relative;
+    z-index: -1;
+    display: flex;
+    flex-direction: column;
+    transition: background-color 0.5s;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 150px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 50px;
+    margin-right: 172px;
+    align-self: flex-start;
+}
+
+nav ul li a {
+    color: #28282B;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: "Montserrat", sans-serif;
+}
+
+nav ul li a:hover {
+    color: var(--secondary-color);
+}
+
+main {
+    padding: 35px 100px;
+    text-align: center;
+    height: 100%;
+    margin: 0 30px;
+    margin-bottom: 30px;
+    border-radius: 20px;
+    background-color: #F6F3EE;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.logo {
+    width: 90px;
+    height: 90px;
+    margin-left: 58px;
+}
+
+h2 {
+    font-family: "Sen", sans-serif;
+    font-size: 33px;
+    font-weight: 800;
+}
+
+h1 {
+    font-family: "Sen", sans-serif;
+    font-size: 80px;
+    font-weight: 800;
+    margin-bottom: 80px;
+}
+
+.rectangle-wrapper {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    margin: 50px auto;
+    
+    padding: 50px 90px;
+        
+    margin-bottom: 170px;
+}
+
+.rectangle-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../assets/images/background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    border-radius: 50px;
+}
+
+.rectangle {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 150px);
+    align-items: start;
+    gap: 70px;
+    background-color: transparent;
+}
+
+.circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.5s, background-color 0.5s;
+    position: relative;
+    box-sizing: border-box;
+    transform-origin: center bottom;
+    cursor: pointer;
+}
+
+.circle .info {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    bottom: -120px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s;
+    color: #F9F3EE;
+}
+
+.circle:hover .info {
+    opacity: 1;
+}
+
+.circle .name {
+    font-family: "Varela", sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.circle .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.circle .social-icons a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 14px;
+}
+
+.circle:hover {
+    transform: translateY(-150px);
+    border: 25px solid #F6F3EE;
+    box-sizing: content-box;
+} 
+
+
+.active {
+    color: var(--secondary-color);
+}
+
+.rectangle.white-border {
+    border-color: white;
+}
+
+body.hover-artist-1 {
+    background-color: #FCB415; /* Change to desired color */
+}
+
+body.hover-artist-2 {
+    background-color: #C83E3E; /* Change to desired color */
+}
+
+body.hover-artist-3 {
+    background-color: #3E609A; /* Change to desired color */
+}
+
+body.hover-artist-4 {
+    
+    background-color: #3FA95F; /* Change to desired color */
+}
+
+body.hover-artist-5 {
+    background-color: #202020; /* Change to desired color */
+}
